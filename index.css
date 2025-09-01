@@ -77,6 +77,7 @@ div.header-menu a{
     flex-wrap:wrap;
     justify-content:space-between;
     font-size:1.1em;
+    min-height:70vh;
 }
 #content{
     width:calc(70% - 20px);
