@@ -78,6 +78,7 @@ div.header-menu a{
     justify-content:space-between;
     font-size:1.1em;
     min-height:100vh;
+    padding-bottom:20vh;
 }
 #content{
     width:calc(70% - 20px);
