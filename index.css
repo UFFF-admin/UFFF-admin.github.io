@@ -88,6 +88,10 @@ div.header-menu a{
     text-align:start;
     border-left:solid 2px gray;
 }
+#sidemenu,#content{
+    padding-left:30px;
+    box-sizing:border-box;
+}
 .article{
     width:90%;
     display:block;
@@ -110,6 +114,7 @@ div.header-menu a{
 }
 h1{
     border-left:solid 5px gray;
+    border-bottom:solid 2px gray;
     padding-left:1em;
     box-sizing:border-box;
     margin:20px 0;
