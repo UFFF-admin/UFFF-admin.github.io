@@ -33,6 +33,9 @@
         a.innerHTML+=`<span class="article-title">${title}</span>`;
         element.appendChild(a);
     }):"";
+    document.querySelector("h1")?document.querySelectorAll("h1").forEach(function(element){
+        element.after(document.createElement("br"));
+    }):"";
     fetch("footer.txt").then(function(data){
         return data.text();
     }).then(function(footer){
