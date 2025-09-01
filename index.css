@@ -115,10 +115,11 @@ div.header-menu a{
 h1{
     border-left:solid 5px gray;
     border-bottom:solid 2px gray;
-    padding-left:1em;
+    padding:0 1em;
     box-sizing:border-box;
     margin:20px 0;
     font-size:1.8em;
+    display:inline-block;
 }
 .footer{
     margin-top:30px;
