@@ -2,6 +2,12 @@
     function id(id){
         return document.getElementById(id);
     }
+    (function(){
+        let link=document.createElement("link");
+        link.rel="icon";
+        link.href="Emblem_of_UFFF.svg";
+        document.querySelector("head").appendChild(link);
+    })();
     fetch("header.txt").then(function(data){
         return data.text();
     }).then(function(header){
