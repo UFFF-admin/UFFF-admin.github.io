@@ -78,7 +78,7 @@ div.header-menu a{
     flex-wrap:wrap;
     justify-content:space-between;
     font-size:1.1em;
-    min-height:70vh;
+    min-height:100vh;
     padding-bottom:20vh;
     padding-top:1em;
     background:var(--white);
@@ -157,6 +157,12 @@ h1{
         text-align:center;
     }
     .main-parent{
-        width:100%;
+        width:90%;
+        min-height:70vh;
+    }
+}
+@media screen and (min-width:650px) and (orientation: portrait){
+    body{
+        font-size:2em;
     }
 }
