@@ -12,6 +12,7 @@
 body{
     margin:0;
     text-align:center;
+    background:#f5f5f5;
 }
 a{
     color:#000080;
@@ -79,6 +80,8 @@ div.header-menu a{
     font-size:1.1em;
     min-height:100vh;
     padding-bottom:20vh;
+    padding-top:1em;
+    background:var(--white);
 }
 #content{
     width:calc(70% - 20px);
@@ -152,5 +155,8 @@ h1{
     }
     .header-menu{
         text-align:center;
+    }
+    .main-parent{
+        width:100%;
     }
 }
