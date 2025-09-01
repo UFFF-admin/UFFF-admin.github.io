@@ -1,0 +1,16 @@
+<div class="footer">
+    <a href="index.html" class="footer-logo-link">
+        <img src="Emblem_of_UFFF.svg" class="footer-logo">
+        <div class="footer-logo">
+            <div class="footer-h1">統一友愛戦線</div>
+            <br>
+            <div class="footer-h2">
+                United Front for Fraternity
+                <br>
+                UFFU
+            </div>
+        </div>
+    </a>
+    <br>
+    <a href="index.html" class="footer-copyright">©UFFF</a>
+</div>
