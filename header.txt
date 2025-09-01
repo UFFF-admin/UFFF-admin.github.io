@@ -1,0 +1,24 @@
+<header>
+    <div class="header-main">
+        <a href="index.html" class="header-logo-link">
+            <img src="Emblem_of_UFFF.svg" class="header-logo">
+            <div class="header-logo">
+                <div class="header-h1">統一友愛戦線</div>
+                <br>
+                <div class="header-h2">
+                    United Front for Fraternity
+                    <br>
+                    UFFU
+                </div>
+            </div>
+        </a>
+        <div class="header-menu">
+            <a href="index.html">HOME</a>
+            <a href="news.html">News</a>
+            <a href="about.html">About</a>
+            <a href="history.html">History</a>
+            <a href="rule.html">Rule</a>
+            <a href="discord.html">Discord</a>
+        </div>
+    </div>
+</header>
