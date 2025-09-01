@@ -35,11 +35,11 @@ a.header-logo-link,a.footer-logo-link{
     text-decoration:none;
 }
 img.header-logo{
-    width:90px;
+    width:6em;
     margin-right:10px;
 }
 img.footer-logo{
-    width:99px;
+    width:6.6em;
     margin-right:11px;
 }
 div.header-logo,div.footer-logo{
