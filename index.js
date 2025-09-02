@@ -48,4 +48,16 @@
     }).then(function(footer){
         document.body.innerHTML+=footer;
     });
+    window.onscroll=function(){
+        let header=document.querySelector("header").offsetHeight;
+        let banner=document.querySelector(".banner");
+        if(scrollY>header){
+            banner.style.visibility="visible";
+            banner.style.opacity="1";
+        }
+        else{
+            banner.style.visibility="hidden";
+            banner.style.opacity="0";
+        }
+    };
 })();
