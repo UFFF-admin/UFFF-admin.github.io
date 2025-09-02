@@ -74,6 +74,30 @@ div.header-menu a{
 div.header-menu a:hover{
     color:#f5f5f5;
 }
+div.banner{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:55px;
+    background:var(--blue);
+    text-align:center;
+}
+div.banner-main{
+    width:var(--width);
+    height:inherit;
+    text-align:start;
+}
+div.banner-logo{
+    max-height:50px;
+}
+div.banner-logo-link{
+    display:inline-flex;
+    align-items:center;
+    color:var(--lemon);
+    font-size:1.5em;
+    font-weight:bold;
+}
 .main-parent{
     margin-top:30px;
     display:inline-flex;
