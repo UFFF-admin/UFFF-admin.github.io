@@ -15,7 +15,7 @@
     fetch("header.txt").then(function(data){
         return data.text();
     }).then(function(header){
-        document.body.innerHTML=header+document.body.innerHTML;
+        document.body.insertAdjacentHTML("afterbegin",header);
     });
     if(id("source")){
         let main=document.createElement("div");
@@ -86,7 +86,7 @@
     fetch("footer.txt").then(function(data){
         return data.text();
     }).then(function(footer){
-        document.body.innerHTML+=footer;
+        document.body.insertAdjacentHTML("beforeend",footer);
     });
     window.onscroll=function(){
         if(document.querySelector("header")){
