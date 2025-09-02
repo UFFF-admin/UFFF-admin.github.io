@@ -46,6 +46,7 @@
         media.src=element.src;
         media.style.cssText=`position:relative;max-width:100%;height:${window.innerHeight/5*4}px;`;
         media.controls=true;
+        mediascreen.id="media";
         mediascreen.appendChild(media);
         media.style.top=(window.innerHeight-media.offsetHeight)/2;
         document.body.appendChild(mediascreen);
