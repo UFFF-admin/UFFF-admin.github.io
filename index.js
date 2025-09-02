@@ -31,7 +31,9 @@
             id("sidemenu").innerHTML=sidemenu;
         });
         document.querySelector("#content img,#content video")?document.querySelectorAll("#content img,#content video").forEach(function(element){
-            element.onclick=openMedia;
+            if(!element.classList.contains("noviewer")){
+                element.onclick=openMedia;
+            }
         }):"";
         if(hash.media&&hash.media<document.querySelectorAll("#content img,#content video").length){
             openMedia(document.querySelectorAll("#content img,#content video")[hash.media]);
