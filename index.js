@@ -26,7 +26,11 @@
         }).then(function(sidemenu){
             id("sidemenu").innerHTML=sidemenu;
         });
+        document.querySelector("#content img,#content video")
     }
+    function openMedia(element){
+        element=element.target||element;
+    };
     document.querySelector(".article")?document.querySelectorAll(".article").forEach(function(element){
         let a=document.createElement("a");
         let img=document.createElement("img");
