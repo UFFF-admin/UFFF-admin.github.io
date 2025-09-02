@@ -83,11 +83,14 @@ div.banner{
     background:color-mix(in srgb,var(--blue) 90%,transparent);
     box-shadow:0px 0px 4px 0 var(--blue);
     text-align:center;
+    visibility:hidden;
+    opacity:0;
 }
 div.banner-main{
     width:var(--width);
     height:inherit;
-    display:inline-block;
+    display:inline-flex;
+    align-items:center;
     text-align:start;
 }
 img.banner-logo{
