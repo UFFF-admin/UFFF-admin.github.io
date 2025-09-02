@@ -24,7 +24,7 @@
 </header>
 <div class="banner">
     <div class="banner-main">
-        <a class="banner-logo-link">
+        <a class="banner-logo-link" href="index.html">
             <img src="Emblem_of_UFFF.svg" class="banner-logo">統一友愛戦線
         </a>
     </div>
