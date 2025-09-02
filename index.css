@@ -104,6 +104,10 @@ a.banner-logo-link{
     font-size:1.5em;
     font-weight:bold;
     column-gap:10px;
+    text-decoration:none;
+}
+:is(a.banner-logo-link,div.header-logo,div.footer-logo):hover{
+    color:var(--yellow);
 }
 .main-parent{
     margin-top:30px;
