@@ -30,13 +30,12 @@
         }).then(function(sidemenu){
             id("sidemenu").innerHTML=sidemenu;
         });
-        document.querySelector("#content img,#content video")?document.querySelectorAll("#content img,#content video").forEach(function(element){
-            element.onclick=openMedia;
-            console.log("fuck",element);
-        }):"";
-        if(hash.media&&hash.media<document.querySelectorAll("#content img,#content video").length){
-            mediaOpen(document.querySelectorAll("#content img,#content video")[hash.media]);
-        }
+    }
+    document.querySelector("#content img,#content video")?document.querySelectorAll("#content img,#content video").forEach(function(element){
+        element.onclick=openMedia;
+    }):"";
+    if(hash.media&&hash.media<document.querySelectorAll("#content img,#content video").length){
+        openMedia(document.querySelectorAll("#content img,#content video")[hash.media]);
     }
     function openMedia(element){
         element=element.target||element;
