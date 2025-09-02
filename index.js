@@ -42,14 +42,14 @@
         let mediascreen=document.createElement("div");
         let media=document.createElement(element.tagName||"img");
         let allMedia=[...document.querySelectorAll("#content img,#content video")];
-        mediascreen.inenrHTML=`<div id="media-closebtn">×</div>`;
+        mediascreen.innerHTML=`<div id="media-closebtn">×</div>`;
         media.src=element.src;
         media.style.cssText=`position:relative;max-width:100%;height:${window.innerHeight/5*4}px;`;
         media.controls=true;
         mediascreen.id="media";
         mediascreen.appendChild(media);
-        media.style.top=(window.innerHeight-media.offsetHeight)/2;
         document.body.appendChild(mediascreen);
+        media.style.top=(window.innerHeight-media.offsetHeight)/2;
         function closeMedia(){
             let scpx=window.scrollY;
             mediascreen.remove();
