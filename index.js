@@ -8,6 +8,10 @@
         link.href="Emblem_of_UFFF.svg";
         document.querySelector("head").appendChild(link);
     })();
+    let url={};
+    location.search.replace("?","").split("&").forEach(function(value){url[value.split("=")[0]]=value.split("=")[1]});
+    let hash={};
+    location.hash.replace("#","").split("&").forEach(function(value){hash[value.split("=")[0]]=value.split("=")[1]});
     fetch("header.txt").then(function(data){
         return data.text();
     }).then(function(header){
@@ -26,7 +30,12 @@
         }).then(function(sidemenu){
             id("sidemenu").innerHTML=sidemenu;
         });
-        document.querySelector("#content img,#content video").onclick=openMedia;
+        document.querySelector("#content img,#content video")?document.querySelectorAll("#content img,#content video").forEach(function(element){
+            element.onclick=openMedia;
+        });
+        if(hash.media&&hash.media<document.querySelectorAll("#content img,#content video").length){
+            mediaOpen(document.querySelectorAll("#content img,#content video")[hash.media]);
+        }
     }
     function openMedia(element){
         element=element.target||element;
