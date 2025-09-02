@@ -89,7 +89,7 @@ div.banner-main{
     display:inline-block;
     text-align:start;
 }
-div.banner-logo{
+img.banner-logo{
     max-height:50px;
 }
 a.banner-logo-link{
