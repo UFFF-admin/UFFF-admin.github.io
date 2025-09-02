@@ -56,8 +56,12 @@
             banner.style.opacity="1";
         }
         else{
-            banner.style.visibility="hidden";
             banner.style.opacity="0";
+            setTimeout(function(){
+                if(scrollY<=header){
+                    banner.style.visibility="hidden";
+                }
+            },200);
         }
     };
 })();
