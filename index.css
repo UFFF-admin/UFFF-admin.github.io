@@ -136,6 +136,9 @@ a.banner-logo-link{
     padding-left:30px;
     box-sizing:border-box;
 }
+:is(#content img,#content video):not(.noviewer){
+    cursor:pointer;
+}
 .article{
     width:90%;
     display:block;
