@@ -49,7 +49,7 @@
         document.body.innerHTML+=footer;
     });
     window.onscroll=function(){
-        let header=document.querySelector("header").offsetHeight;
+        let header=document.querySelector("header").offsetHeight+10;
         let banner=document.querySelector(".banner");
         if(scrollY>header){
             banner.style.visibility="visible";
