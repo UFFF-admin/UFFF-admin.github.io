@@ -89,19 +89,21 @@
         document.body.innerHTML+=footer;
     });
     window.onscroll=function(){
-        let header=document.querySelector("header").offsetHeight+10;
-        let banner=document.querySelector(".banner");
-        if(scrollY>header){
-            banner.style.visibility="visible";
-            banner.style.opacity="1";
-        }
-        else{
-            banner.style.opacity="0";
-            setTimeout(function(){
-                if(scrollY<=header){
-                    banner.style.visibility="hidden";
-                }
-            },200);
+        if(document.querySelector("header")){
+            let header=document.querySelector("header").offsetHeight+10;
+            let banner=document.querySelector(".banner");
+            if(scrollY>header){
+                banner.style.visibility="visible";
+                banner.style.opacity="1";
+            }
+            else{
+                banner.style.opacity="0";
+                setTimeout(function(){
+                    if(scrollY<=header){
+                        banner.style.visibility="hidden";
+                    }
+                },200);
+            }
         }
     };
 })();
