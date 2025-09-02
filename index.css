@@ -194,10 +194,10 @@ h1{
     z-index:2;
 }
 #media-closebtn{
-    font-size:1.2em;
-    height:1.5em;
-    line-height:1.5em;
-    width:1.5em;
+    font-size:1.5em;
+    height:2em;
+    line-height:2em;
+    width:2em;
     text-align:center;
     background:rgba(0,0,0,0.8);
     color:white;
