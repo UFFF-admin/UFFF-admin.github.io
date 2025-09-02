@@ -32,7 +32,6 @@
         });
         document.querySelector("#content img,#content video")?document.querySelectorAll("#content img,#content video").forEach(function(element){
             element.onclick=openMedia;
-            console.log(element);
         }):"";
         if(hash.media&&hash.media<document.querySelectorAll("#content img,#content video").length){
             openMedia(document.querySelectorAll("#content img,#content video")[hash.media]);
@@ -50,7 +49,9 @@
         mediascreen.id="media";
         mediascreen.appendChild(media);
         document.body.appendChild(mediascreen);
-        media.style.top=(window.innerHeight-media.offsetHeight)/2;
+        media.onload=function(){
+            media.style.top=(window.innerHeight-media.offsetHeight)/2;
+        };
         function closeMedia(){
             let scpx=window.scrollY;
             mediascreen.remove();
@@ -64,7 +65,7 @@
         };
         id("media-closebtn").onclick=closeMedia;
         location.hash="media="+allMedia.findIndex(function(data){
-            return data==media;
+            return data==element;
         });
     };
     document.querySelector(".article")?document.querySelectorAll(".article").forEach(function(element){
