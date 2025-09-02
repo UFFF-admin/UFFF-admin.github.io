@@ -86,17 +86,19 @@ div.banner{
 div.banner-main{
     width:var(--width);
     height:inherit;
+    display:inline-block;
     text-align:start;
 }
 div.banner-logo{
     max-height:50px;
 }
-div.banner-logo-link{
+a.banner-logo-link{
     display:inline-flex;
     align-items:center;
     color:var(--lemon);
     font-size:1.5em;
     font-weight:bold;
+    column-gap:10px;
 }
 .main-parent{
     margin-top:30px;
