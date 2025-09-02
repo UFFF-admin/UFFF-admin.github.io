@@ -201,7 +201,10 @@ h1{
     text-align:center;
     background:rgba(0,0,0,0.8);
     color:white;
-    position:relative;
+    position:fixed;
+    top:0;
+    right:0;
+    cursor:pointer;
     z-index:3;
 }
 @media screen and (max-width:850px), screen and (orientation: portrait){
