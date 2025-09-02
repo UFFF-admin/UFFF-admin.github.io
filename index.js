@@ -26,10 +26,35 @@
         }).then(function(sidemenu){
             id("sidemenu").innerHTML=sidemenu;
         });
-        document.querySelector("#content img,#content video")
+        document.querySelector("#content img,#content video").onclick=openMedia;
     }
     function openMedia(element){
         element=element.target||element;
+        let mediascreen=document.createElement("div");
+        let media=document.createElement(element.tagName||"img");
+        let allMedia=[...document.querySelectorAll("#content img,#content video")];
+        mediascreen.inenrHTML=`<div id="media-closebtn">×</div>`;
+        media.src=element.src;
+        media.style.cssText=`position:relative;max-width:100%;height:${window.innerHeight/5*4}px;`;
+        media.controls=true;
+        mediascreen.appendChild(media);
+        media.style.top=(window.innerHeight-media.offsetHeight)/2;
+        document.body.appendChild(mediascreen);
+        function closeMedia(){
+            let scpx=window.scrollY;
+            mediascreen.remove();
+            location.hash="";
+            window.scroll(0,scpx);
+        };
+        mediascreen.onclick=function(e){
+            if(e.target!=id("media-closebtn")&&media.tagName!="video"){
+                closeMedia();
+            }
+        };
+        id("media-closebtn").onclick=closeMedia;
+        location.hash="media="+allMedia.findIndex(function(data){
+            return data==media;
+        });
     };
     document.querySelector(".article")?document.querySelectorAll(".article").forEach(function(element){
         let a=document.createElement("a");
