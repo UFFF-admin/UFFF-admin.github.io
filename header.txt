@@ -8,7 +8,7 @@
                 <div class="header-h2">
                     United Front for Fraternity
                     <br>
-                    UFFU
+                    UFFF
                 </div>
             </div>
         </a>
