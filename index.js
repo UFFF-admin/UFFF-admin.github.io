@@ -45,7 +45,7 @@
         let allMedia=[...document.querySelectorAll("#content img,#content video")];
         mediascreen.innerHTML=`<div id="media-closebtn">×</div>`;
         media.src=element.src;
-        media.style.cssText=`position:relative;max-width:100%;height:${window.innerHeight/5*4}px;`;
+        media.style.cssText=`position:relative;max-width:100%;max-height:${window.innerHeight/5*4}px;`;
         media.controls=true;
         mediascreen.id="media";
         mediascreen.appendChild(media);
