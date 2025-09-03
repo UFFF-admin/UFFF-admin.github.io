@@ -125,6 +125,7 @@ a.banner-logo-link{
 #content{
     width:calc(70% - 20px);
     text-align:start;
+    line-height:1.8;
 }
 #sidemenu{
     width:30%;
