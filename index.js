@@ -38,6 +38,9 @@
         if(hash.media&&hash.media<document.querySelectorAll("#content img,#content video").length){
             openMedia(document.querySelectorAll("#content img,#content video")[hash.media]);
         }
+        if(id("redirect")){
+            location.href=id("redirect").getAttribute("target");
+        }
     }
     function openMedia(element){
         element=element.target||element;
