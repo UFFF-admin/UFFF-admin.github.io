@@ -8,6 +8,7 @@
     --red:#ce1126;
     --yellow:#ffff00;
     --width:75vw;
+    --banner-height:55px;
 }
 body{
     margin:0;
@@ -81,7 +82,7 @@ div.banner{
     top:0;
     left:0;
     width:100%;
-    height:55px;
+    height:var(--banner-height);
     background:color-mix(in srgb,var(--blue) 90%,transparent);
     box-shadow:0px 0px 4px 0 var(--blue);
     text-align:center;
@@ -133,6 +134,10 @@ a.banner-logo-link{
     text-align:start;
     border-left:solid 2px gray;
     font-size:0.9em;
+}
+#sidemenu-items{
+    position:sticky;
+    top:var(--banner-height);
 }
 #sidemenu,#content{
     padding-left:30px;
@@ -250,11 +255,11 @@ p{
     }
 }
 @media screen and (min-width:650px) and (orientation: portrait){
+    :root{
+        --banner-height:110px !important;
+    }
     body{
         font-size:2em;
-    }
-    .banner{
-        height:110px !important;
     }
     img.banner-logo{
         max-height:100px;
