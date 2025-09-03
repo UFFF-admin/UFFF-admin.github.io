@@ -71,7 +71,7 @@
         id("media-closebtn").onclick=closeMedia;
         location.hash="media="+allMedia.findIndex(function(data){
             return data==element;
-        });
+        })+"&filepath="+element.src;
     };
     document.querySelector(".article")?document.querySelectorAll(".article").forEach(function(element){
         let a=document.createElement("a");
