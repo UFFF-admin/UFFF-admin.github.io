@@ -1,6 +1,6 @@
 <header>
     <div class="header-main">
-        <a href="index.html" class="header-logo-link">
+        <a href="/" class="header-logo-link">
             <img src="Emblem_of_UFFF.svg" class="header-logo">
             <div class="header-logo">
                 <div class="header-h1">統一友愛戦線</div>
@@ -13,18 +13,18 @@
             </div>
         </a>
         <div class="header-menu">
-            <a href="index.html">HOME</a>
-            <a href="news.html">News</a>
-            <a href="about.html">About</a>
-            <a href="history.html">History</a>
-            <a href="rule.html">Rule</a>
-            <a href="discord.html">Discord</a>
+            <a href="/">HOME</a>
+            <a href="news">News</a>
+            <a href="about">About</a>
+            <a href="history">History</a>
+            <a href="rule">Rule</a>
+            <a href="discord">Discord</a>
         </div>
     </div>
 </header>
 <div class="banner">
     <div class="banner-main">
-        <a class="banner-logo-link" href="index.html">
+        <a class="banner-logo-link" href="/">
             <img src="Emblem_of_UFFF.svg" class="banner-logo">統一友愛戦線
         </a>
     </div>
