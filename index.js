@@ -28,7 +28,7 @@
         fetch("sidemenu.txt").then(function(data){
             return data.text();
         }).then(function(sidemenu){
-            id("sidemenu").innerHTML=sidemenu;
+            id("sidemenu").innerHTML=`<div id="sidemenu-items">${sidemenu}</div>`;
         });
         document.querySelector("#content img,#content video")?document.querySelectorAll("#content img,#content video").forEach(function(element){
             if(!element.classList.contains("noviewer")){
