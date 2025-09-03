@@ -93,6 +93,7 @@
         return data.text();
     }).then(function(footer){
         document.body.insertAdjacentHTML("beforeend",footer);
+        document.body.style.opacity="1";
     });
     window.onscroll=function(){
         if(document.querySelector("header")){
