@@ -211,6 +211,13 @@ h1{
     cursor:pointer;
     z-index:3;
 }
+li.date{
+    display:inline;
+    font-weight:bold;
+}
+li.date:before{
+    content:"・";
+}
 @media screen and (max-width:850px), screen and (orientation: portrait){
     #sidemenu{
         width:100%;
