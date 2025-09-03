@@ -218,6 +218,9 @@ li.date{
 li.date:before{
     content:"・";
 }
+p{
+    margin-top:0;
+}
 @media screen and (max-width:850px), screen and (orientation: portrait){
     #sidemenu{
         width:100%;
