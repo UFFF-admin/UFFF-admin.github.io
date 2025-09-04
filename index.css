@@ -161,6 +161,11 @@ a.banner-logo-link{
     align-items:center;
     text-decoration:none;
 }
+.article .article-items{
+    display:inline-block;
+    margin-left:1em;
+    line-height:normal;
+}
 .article .article-title{
     color:black;
     font-weight:bold;
