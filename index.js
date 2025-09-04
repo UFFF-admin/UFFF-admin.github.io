@@ -76,13 +76,13 @@
     document.querySelector(".article")?document.querySelectorAll(".article").forEach(function(element){
         let a=document.createElement("a");
         let img=document.createElement("img");
-        img.src=element.getAttribute("img");
+        img.src=element.getAttribute("img")||"Flag_of_UFFF.svg";
         img.classList.add("article-img");
         a.href=element.getAttribute("link");
         let title=element.innerHTML;
         element.innerHTML="";
         a.appendChild(img);
-        a.innerHTML+=`<span class="article-title">${title}</span>`;
+        a.innerHTML+=`<span class="article-title">${title}</span><br><span class="article-date">${element.getAttribute("date")}</span>`;
         element.appendChild(a);
     }):"";
     document.querySelector("h1")?document.querySelectorAll("h1").forEach(function(element){
