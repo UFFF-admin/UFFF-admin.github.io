@@ -82,7 +82,7 @@
         let title=element.innerHTML;
         element.innerHTML="";
         a.appendChild(img);
-        a.innerHTML+=`<span class="article-title">${title}</span><br><span class="article-date">${element.getAttribute("date")}</span>`;
+        a.innerHTML+=`<div class="article-items"><span class="article-title">${title}</span><br><span class="article-date">${element.getAttribute("date")}</span></div>`;
         element.appendChild(a);
     }):"";
     document.querySelector("h1")?document.querySelectorAll("h1").forEach(function(element){
