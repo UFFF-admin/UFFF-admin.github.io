@@ -11,9 +11,18 @@
 		<style>{{ page.style | default: '' }}</style>
 	</head>
 	<body>
-		<div id="source">
-			{{ content }}
+		{% include header.html %}
+		<div class="main-parent">
+			<div id="content">
+				{{ content }}
+			</div>
+			<div id="sidemenu">
+				<div id="sidemenu-items">
+					{% include sidemenu.html %}
+				</div>
+			</div>
 		</div>
+		{% include footer.html %}
 		<script src="index.js"></script>
 	</body>
 </html>
