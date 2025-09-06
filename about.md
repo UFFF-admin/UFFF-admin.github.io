@@ -1,23 +1,6 @@
-<html>
-	<head prefix="og: http://ogp.me/ns#">
-		<meta charset="utf-8">
-	  	<meta property="og:description" content="統一友愛戦線 / United Front for Fraternity・旧荒らし賛美の会（Praise of Destruction Party / PODP）公式サイト">
-		<meta property="og:site_name" content="UFFF公式サイト">
-		<meta property="og:type" content="article">
-		<meta property="og:image" content="https://ufff-jp.netlify.app/Flag_of_UFFF.png">
-		<meta property="og:title" content="情報">
-    	<link rel="stylesheet" href="index.css">
-		<title>情報</title>
-    	<style>
-.flag{
-  margin:1em;
-  height:5em;
-  vertical-align:top;
-}
-    	</style>
-	</head>
-	<body>
-	    <div id="source">
+---
+title:情報
+---
 	    	<h1>基本情報</h1>
 	    	正式名称：統一友愛戦線<br>
 	    	正式名称（英語）：United Front for Fraternity<br>
@@ -49,7 +32,3 @@
 	        	<li>投稿した内容に関するルールが存在しないため部屋さえ弁えればさまざまな議論もできる</li>
 	        	<li>ボイチャ可能</li>
 			</ul>
-	    </div>
-    	<script src="index.js"></script>
-	</body>
-</html>
