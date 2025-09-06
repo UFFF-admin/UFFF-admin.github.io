@@ -3,15 +3,16 @@
 		<meta charset="utf-8">
 		<meta property="og:description" content="統一友愛戦線 / United Front for Fraternity・旧荒らし賛美の会（Praise of Destruction Party / PODP）公式サイト">
 		<meta property="og:site_name" content="UFFF公式サイト">
-		<meta property="og:type" content="article">
+		<meta property="og:type" content="{{ page.type | default: 'article' }}">
 		<meta property="og:image" content="https://ufff-jp.netlify.app/Flag_of_UFFF.png">
-		<meta property="og:title" content="">
-		<title></title>
+		<meta property="og:title" content="{{ page.title }}">
+		<title>{{ page.title }}</title>
 		<link rel="stylesheet" href="index.css">
+		<style>{{ page.style | default: '' }}</style>
 	</head>
 	<body>
 		<div id="source">
-			<h1></h1>
+			{{ content }}
 		</div>
 		<script src="index.js"></script>
 	</body>
