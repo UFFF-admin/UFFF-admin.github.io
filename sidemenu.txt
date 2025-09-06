@@ -1,5 +1,6 @@
 <h1 style="font-size:1.5em">メニュー</h1>
 <ul>
+    <li><a href="/">トップページ</a></li>
     <li><a href="news">ニュース</a></li>
     <li><a href="articles">参加者の記事</a></li>
     <li><a href="about">UFFFの基本情報</a></li>
