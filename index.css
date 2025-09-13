@@ -157,7 +157,7 @@ a.banner-logo-link{
 }
 .article a{
     display:flex;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
     align-items:center;
     text-decoration:none;
 }
