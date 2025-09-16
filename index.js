@@ -65,10 +65,10 @@
             window.scroll(0,scpx);
         };
         mediascreen.onclick=function(e){
-            if(e.target!=media&&media.tagName!="IMG"&&media.tagName!="VIDEO"){
+            if(e.target!=media){
                 closeMedia();
             }
-            else if(media.tagName=="IMG"){
+            else if(e.target.tagName=="IMG"){
                 location.href=element.src;
             }
         };
