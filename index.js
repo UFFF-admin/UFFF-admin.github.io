@@ -65,7 +65,7 @@
             window.scroll(0,scpx);
         };
         mediascreen.onclick=function(e){
-            if(media.tagName!="IMG"&&media.tagName!="VIDEO"){
+            if(e.target!=media&&media.tagName!="IMG"&&media.tagName!="VIDEO"){
                 closeMedia();
             }
             else if(media.tagName=="IMG"){
