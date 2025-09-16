@@ -12,6 +12,7 @@
     location.search.replace("?","").split("&").forEach(function(value){url[value.split("=")[0]]=value.split("=")[1]});
     let hash={};
     location.hash.replace("#","").split("&").forEach(function(value){hash[value.split("=")[0]]=value.split("=")[1]});
+    let mediaElements="#content img,#content video";
     fetch("header.txt").then(function(data){
         return data.text();
     }).then(function(header){
@@ -30,13 +31,13 @@
         }).then(function(sidemenu){
             id("sidemenu").innerHTML=`<div id="sidemenu-items">${sidemenu}</div>`;
         });
-        document.querySelector("#content img,#content video")?document.querySelectorAll("#content img,#content video").forEach(function(element){
+        document.querySelector(mediaElements)?document.querySelectorAll(mediaElements).forEach(function(element){
             if(!element.classList.contains("noviewer")){
                 element.onclick=openMedia;
             }
         }):"";
-        if(hash.media&&hash.media<document.querySelectorAll("#content img,#content video").length){
-            openMedia(document.querySelectorAll("#content img,#content video")[hash.media]);
+        if(hash.media&&hash.media<document.querySelectorAll(mediaElements).length){
+            openMedia(document.querySelectorAll(mediaElements)[hash.media]);
         }
         if(id("redirect")){
             location.href=id("redirect").getAttribute("target");
@@ -46,7 +47,7 @@
         element=element.target||element;
         let mediascreen=document.createElement("div");
         let media=document.createElement(element.tagName||"img");
-        let allMedia=[...document.querySelectorAll("#content img,#content video")];
+        let allMedia=[...document.querySelectorAll(mediaElements)];
         mediascreen.innerHTML=`<div id="media-closebtn">×</div>`;
         media.src=element.src;
         media.style.cssText=`position:relative;max-width:100%;max-height:${window.innerHeight/5*4}px;`;
