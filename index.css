@@ -229,6 +229,9 @@ h1{
     cursor:pointer;
     z-index:3;
 }
+#media img{
+    cursor:pointer;
+}
 li.date{
     display:inline;
     font-weight:bold;
