@@ -232,6 +232,9 @@ h1{
 #media img{
     cursor:pointer;
 }
+#media img,#media video{
+    transition:top 0.2s;
+}
 li.date{
     display:inline;
     font-weight:bold;
