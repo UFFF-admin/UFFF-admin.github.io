@@ -252,6 +252,11 @@ p{
     color:var(--red);
     font-weight:bold;
 }
+.flag{
+	width:30%;
+	margin:1em;
+	vertical-align:top;
+}
 @media screen and (max-width:850px), screen and (orientation: portrait){
     #sidemenu{
         width:100%;
