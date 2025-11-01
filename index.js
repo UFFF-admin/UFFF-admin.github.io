@@ -50,14 +50,12 @@
         let allMedia=[...document.querySelectorAll(mediaElements)];
         mediascreen.innerHTML=`<div id="media-closebtn">×</div>`;
         media.src=element.src;
-        media.style.cssText=`position:relative;max-width:100%;max-height:${window.innerHeight/5*4}px;`;
+        media.style.cssText=`max-width:100%;max-height:${window.innerHeight/5*4}px;`;
         media.controls=true;
         mediascreen.id="media";
         mediascreen.appendChild(media);
         document.body.appendChild(mediascreen);
-        media.onload=function(){
-            media.style.top=(window.innerHeight-media.offsetHeight)/2;
-        };
+        media.style.top="0px";
         function closeMedia(){
             let scpx=window.scrollY;
             mediascreen.remove();
