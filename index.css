@@ -236,7 +236,7 @@ h1{
 }
 #media img,#media video{
     position:relative;
-    top:-20;
+    top:-30px;
     transition:top 0.2s;
 }
 li.date{
