@@ -55,7 +55,9 @@
         mediascreen.id="media";
         mediascreen.appendChild(media);
         document.body.appendChild(mediascreen);
-        media.style.top="0px";
+        media.onload=function(){
+            media.style.top="0px";
+        };
         function closeMedia(){
             let scpx=window.scrollY;
             mediascreen.remove();
