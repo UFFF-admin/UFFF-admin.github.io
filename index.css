@@ -49,6 +49,7 @@ div.header-logo,div.footer-logo{
     display:inline-block;
     color:var(--lemon);
     vertical-align:super;
+	text-align:center;
 }
 div.header-h1,div.footer-h1{
     font-size:1.5em;
