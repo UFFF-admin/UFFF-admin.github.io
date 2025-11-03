@@ -19,6 +19,7 @@ body{
 }
 a{
     color:#000080;
+	transition:color 0.2s;
 }
 a:hover{
     color:var(--blue);
@@ -109,6 +110,7 @@ a.banner-logo-link{
     font-size:1.5em;
     column-gap:10px;
     text-decoration:none;
+	co
 }
 :is(a.banner-logo-link,div.header-logo,div.footer-logo):hover{
     color:var(--yellow);
