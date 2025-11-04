@@ -35,42 +35,41 @@ function id(id){
 }
 id("preview").width=id("content").offsetWidth*0.9;
 function upload(){
-    let r=new FileReader();
-    r.readAsDataURL(blob);
-    r.onload=function(){
-	    let img=new Image();
-        let canvas=document.createElement("canvas");
-        let ctx=canvas.getContext("2d");
-        img.src=r.result;
-        img.onload=function(){
-            canvas.width=img.width;
-            canvas.height=img.height;
-            ctx.drawImage(img,0,0,canvas.width,canvas.height);
-            let watermark=new Image();
-            watermark.src=id("white").checked?"WaterMark_of_UFFF.svg":"WaterMark_of_UFFF_Dark.svg";
-			watermark.onload=function(){
-				watermark.width=canvas.height*0.17;
-				watermark.height=watermark.width;
-				ctx.drawImage(watermark,canvas.width-watermark.width*1.14,watermark.height*0.14,watermark.width,watermark.height);
-				let previewLink=canvas.toDataURL();
-				id("preview").src=previewLink;
-				id("preview").height=id("preview").width/canvas.width*canvas.height;
-				id("download").onclick=function(){
-					let a=document.createElement("a");
-					a.download="";
-					a.href=previewLink;
-					a.click();
+	if(blob){
+	    let r=new FileReader();
+	    r.readAsDataURL(blob);
+	    r.onload=function(){
+		    let img=new Image();
+	        let canvas=document.createElement("canvas");
+	        let ctx=canvas.getContext("2d");
+	        img.src=r.result;
+	        img.onload=function(){
+	            canvas.width=img.width;
+	            canvas.height=img.height;
+	            ctx.drawImage(img,0,0,canvas.width,canvas.height);
+	            let watermark=new Image();
+	            watermark.src=id("white").checked?"WaterMark_of_UFFF.svg":"WaterMark_of_UFFF_Dark.svg";
+				watermark.onload=function(){
+					watermark.width=canvas.height*0.17;
+					watermark.height=watermark.width;
+					ctx.drawImage(watermark,canvas.width-watermark.width*1.14,watermark.height*0.14,watermark.width,watermark.height);
+					let previewLink=canvas.toDataURL();
+					id("preview").src=previewLink;
+					id("preview").height=id("preview").width/canvas.width*canvas.height;
+					id("download").onclick=function(){
+						let a=document.createElement("a");
+						a.download="";
+						a.href=previewLink;
+						a.click();
+					}
 				}
-			}
-        }
-    }
+	        }
+	    }
+	}
 }
 id("upload").onchange=function(){
     blob=id("upload").files[0];
 	upload();
-}
-id("upload").oncancel=function(){
-	id("clear").click();
 }
 document.onpaste=function(e){
     [...e.clipboardData.items].forEach(function(data){
