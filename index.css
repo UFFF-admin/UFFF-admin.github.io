@@ -261,10 +261,12 @@ p{
 	margin:1em;
 	vertical-align:top;
 }
+input{
+	font-size:1em;
+}
 input[type="button"],::file-selector-button{
 	background:#000080;
 	color:white;
-	font-size:1em;
 	height:2em;
 	line-height:2em;
 	border:none;
