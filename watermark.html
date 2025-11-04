@@ -24,5 +24,45 @@
 			</p>
 		</div>
 		<script src="index.js"></script>
+		<script>
+            //0.02,0.15
+let blob;
+function id(id){
+	return document.getElementById(id);
+}
+id("submit").onclick=function(){
+    let r=new FileReader();
+    r.readAsDataURL(blob);
+    r.onload=function(){
+	    let img=new Image();
+        let canvas=document.createElement("canvas");
+        let ctx=canvas.getContext("2d");
+        img.src=r.result;
+        img.onload=function(){
+            canvas.width=img.width;
+            canvas.height=img.height;
+            ctx.drawImage(img,0,0,canvas.width,canvas.height);
+            let watermark=new Image();
+            watermark.src="WaterMark_of_UFFF.svg";
+			watermark.onload=function(){
+				watermark.width=canvas.height*0.15;
+				watermark.height=watermark.width;
+				ctx.drawImage(watermark,canvas.width-watermark.width*1.14,canvas.height-watermark.height*1.14,watermark.width,watermark.height);
+				document.body.appendChild(canvas);
+			}
+        }
+    }
+}
+id("upload").onchange=function(){
+    blob=id("upload").files[0];
+}
+document.onpaste=function(e){
+    e.clipboardData.items.forEach(function(data){
+        if(data.type.indexOf("image")==0){
+            blob=data.getAsFile();
+        }
+    });
+}
+		</script>
 	</body>
 </html>
