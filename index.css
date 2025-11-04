@@ -261,6 +261,13 @@ p{
 	margin:1em;
 	vertical-align:top;
 }
+input[type="button"]{
+	background:var(--blue);
+	color:white;
+	font-size:1em;
+	height:2em;
+	line-height:2em;
+}
 @media screen and (max-width:850px), screen and (orientation: portrait){
     #sidemenu{
         width:100%;
