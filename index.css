@@ -261,12 +261,16 @@ p{
 	margin:1em;
 	vertical-align:top;
 }
-input[type="button"]{
-	background:var(--blue);
+input[type="button"],::file-selector-button{
+	background:#000080;
 	color:white;
 	font-size:1em;
 	height:2em;
 	line-height:2em;
+	border:none;
+	border-radius:5px;
+	padding:0 1em;
+	margin:0.5em;
 }
 @media screen and (max-width:850px), screen and (orientation: portrait){
     #sidemenu{
