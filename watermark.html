@@ -20,7 +20,10 @@
 				</ul>
 				<hr>
 				<input type="file" id="upload">または貼り付け<br>
-				<input type="button" id="submit" value="変換">
+				<input type="button" id="submit" value="変換"><br>
+				<input type="button" id="download" value="ダウンロード"><br>
+				プレビュー：<br>
+				<img src="" id="preview">
 			</p>
 		</div>
 		<script src="index.js"></script>
@@ -48,7 +51,14 @@ id("submit").onclick=function(){
 				watermark.width=canvas.height*0.15;
 				watermark.height=watermark.width;
 				ctx.drawImage(watermark,canvas.width-watermark.width*1.14,watermark.height*1.14,watermark.width,watermark.height);
-				document.body.appendChild(canvas);
+				let previewLink=canvas.toDataURL();
+				id("preview").src=previewLink;
+				id("download").onclick=function(){
+					let a=document.createElement("a");
+					a.download="";
+					a.href=previewLink;
+					a.click();
+				}
 			}
         }
     }
@@ -57,7 +67,7 @@ id("upload").onchange=function(){
     blob=id("upload").files[0];
 }
 document.onpaste=function(e){
-    e.clipboardData.items.forEach(function(data){
+    [...e.clipboardData.items].forEach(function(data){
         if(data.type.indexOf("image")==0){
             blob=data.getAsFile();
         }
