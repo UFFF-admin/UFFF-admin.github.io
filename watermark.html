@@ -50,7 +50,7 @@ function upload(){
 	            let watermark=new Image();
 	            watermark.src=id("white").checked?"WaterMark_of_UFFF.svg":"WaterMark_of_UFFF_Dark.svg";
 				watermark.onload=function(){
-					watermark.width=canvas.height*0.17;
+					watermark.width=canvas.height*0.14;
 					watermark.height=watermark.width;
 					ctx.drawImage(watermark,canvas.width-watermark.width*1.14,watermark.height*0.14,watermark.width,watermark.height);
 					let previewLink=canvas.toDataURL();
