@@ -47,7 +47,7 @@ function upload(){
             let watermark=new Image();
             watermark.src="WaterMark_of_UFFF.svg";
 			watermark.onload=function(){
-				watermark.width=canvas.height*0.2;
+				watermark.width=canvas.height*0.17;
 				watermark.height=watermark.width;
 				ctx.drawImage(watermark,canvas.width-watermark.width*1.14,watermark.height*0.14,watermark.width,watermark.height);
 				let previewLink=canvas.toDataURL();
