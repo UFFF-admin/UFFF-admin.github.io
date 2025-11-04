@@ -47,7 +47,7 @@ id("submit").onclick=function(){
 			watermark.onload=function(){
 				watermark.width=canvas.height*0.15;
 				watermark.height=watermark.width;
-				ctx.drawImage(watermark,canvas.width-watermark.width*1.14,canvas.height-watermark.height*1.14,watermark.width,watermark.height);
+				ctx.drawImage(watermark,canvas.width-watermark.width*1.14,watermark.height*1.14,watermark.width,watermark.height);
 				document.body.appendChild(canvas);
 			}
         }
