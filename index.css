@@ -271,6 +271,12 @@ input[type="button"],::file-selector-button{
 	border-radius:5px;
 	padding:0 1em;
 	margin:0.5em;
+	opacity:1;
+	transition:opacity 0.2s;
+	cursor:pointer;
+}
+input[type="button"]:hover,::file-selector-button:hover{
+	opacity:0.8;
 }
 @media screen and (max-width:850px), screen and (orientation: portrait){
     #sidemenu{
