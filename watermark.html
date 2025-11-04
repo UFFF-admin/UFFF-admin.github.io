@@ -33,6 +33,7 @@ let blob;
 function id(id){
 	return document.getElementById(id);
 }
+id("preview").width=id("content").offsetWidth*0.9;
 id("submit").onclick=function(){
     let r=new FileReader();
     r.readAsDataURL(blob);
@@ -50,7 +51,7 @@ id("submit").onclick=function(){
 			watermark.onload=function(){
 				watermark.width=canvas.height*0.15;
 				watermark.height=watermark.width;
-				ctx.drawImage(watermark,canvas.width-watermark.width*1.14,watermark.height*1.14,watermark.width,watermark.height);
+				ctx.drawImage(watermark,canvas.width-watermark.width*1.14,watermark.height*0.14,watermark.width,watermark.height);
 				let previewLink=canvas.toDataURL();
 				id("preview").src=previewLink;
 				id("download").onclick=function(){
