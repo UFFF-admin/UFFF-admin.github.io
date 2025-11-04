@@ -15,13 +15,11 @@
 			<p>
 				<ul>
 					<li>ファイルをアップロード</li>
-					<li>「変換」をクリック</li>
-					<li>ファイルをダウンロード</li>
 				</ul>
 				<hr>
 				<input type="file" id="upload">または貼り付け<br>
-				<input type="button" id="submit" value="変換">
-				<input type="button" id="download" value="ダウンロード"><br>
+				<input type="button" id="download" value="ダウンロード">
+				<input type="button" id="clear" value="クリア"><br>
 				プレビュー：<br>
 				<img src="" id="preview">
 			</p>
@@ -34,7 +32,7 @@ function id(id){
 	return document.getElementById(id);
 }
 id("preview").width=id("content").offsetWidth*0.9;
-id("submit").onclick=function(){
+function upload(){
     let r=new FileReader();
     r.readAsDataURL(blob);
     r.onload=function(){
@@ -66,13 +64,19 @@ id("submit").onclick=function(){
 }
 id("upload").onchange=function(){
     blob=id("upload").files[0];
+	upload();
 }
 document.onpaste=function(e){
     [...e.clipboardData.items].forEach(function(data){
         if(data.type.indexOf("image")==0){
             blob=data.getAsFile();
+			upload();
         }
     });
+}
+id("clear").onclick=function(){
+	id("preview").src="";
+	id("upload").files="";
 }
 		</script>
 	</body>
