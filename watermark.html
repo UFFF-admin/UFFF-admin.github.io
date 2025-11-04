@@ -26,7 +26,6 @@
 		</div>
 		<script src="index.js"></script>
 		<script>
-            //0.02,0.15
 let blob;
 function id(id){
 	return document.getElementById(id);
@@ -52,6 +51,7 @@ function upload(){
 				ctx.drawImage(watermark,canvas.width-watermark.width*1.14,watermark.height*0.14,watermark.width,watermark.height);
 				let previewLink=canvas.toDataURL();
 				id("preview").src=previewLink;
+				id("preview").height=id("preview").width/canvas.width*canvas.height;
 				id("download").onclick=function(){
 					let a=document.createElement("a");
 					a.download="";
@@ -76,6 +76,7 @@ document.onpaste=function(e){
 }
 id("clear").onclick=function(){
 	id("preview").src="";
+	id("preview").height="0";
 	id("upload").files="";
 }
 		</script>
