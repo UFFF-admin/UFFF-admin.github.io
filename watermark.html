@@ -69,6 +69,9 @@ id("upload").onchange=function(){
     blob=id("upload").files[0];
 	upload();
 }
+id("upload").oncancel=function(){
+	id("clear").click();
+}
 document.onpaste=function(e){
     [...e.clipboardData.items].forEach(function(data){
         if(data.type.indexOf("image")==0){
